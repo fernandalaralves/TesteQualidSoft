@@ -14,10 +14,8 @@ public class PayrollSystemTest {
 
         System.out.printf("%s%n%s: $%, .2f%n%n",
                 hourlyEmployee, "ganhado", hourlyEmployee.earnings());
-        System.out.printf("%s%n%s: $%, .2f%n%n",
-                commissionEmployee, "ganhado", commissionEmployee.earnings());
-        System.out.printf("%s%n%s: $%, .2f%n%n", basePlusCommissionEmployee,
-                "ganhado", basePlusCommissionEmployee.earnings());
+        System.out.printf("%s%n%s: $%, .2f%n%n",commissionEmployee, "ganhado", commissionEmployee.earnings());
+        System.out.printf("%s%n%s: $%, .2f%n%n", basePlusCommissionEmployee, "ganhado", basePlusCommissionEmployee.earnings());
 
         Employee[] employees = new Employee[4];
 
@@ -37,12 +35,10 @@ public class PayrollSystemTest {
 
                 employee.setsalarioBase(1.10 * employee.getsalarioBase());
 
-                System.out.printf("Novo salário base com aumento de 10%% é: $%, .2f%n",
-                        employee.getsalarioBase());
+                System.out.printf("Novo salário base com aumento de 10%% é: $%, .2f%n", employee.getsalarioBase());
             }
 
-            System.out.printf("ganhado $%, .2f%n%n",
-                    currentEmployee.earnings());
+            System.out.printf("ganhado $%, .2f%n%n", currentEmployee.earnings());
         }
         for (int j = 0; j < employees.length; j++)
             System.out.printf("Employee %d is a %s%n", j, employees[j].getClass().getName());
