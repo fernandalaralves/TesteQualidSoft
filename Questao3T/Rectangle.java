@@ -18,6 +18,6 @@ public class Rectangle extends Parallelogram{
 
     @Override
     void exibir(){
-        System.out.println("Retângulo - Largura: " + Largura + ", Comprimento: " + Comprimento + ", Área: " + Area());
+        System.out.println("Retângulo - Área: " + Area());
     }
 }
