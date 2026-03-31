@@ -10,7 +10,7 @@ public class Square extends Rectangle{
     }
 
     @Override
-double Area(){
+    double Area(){
     return Lado * Lado;
     }
 
