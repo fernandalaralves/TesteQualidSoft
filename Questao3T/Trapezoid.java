@@ -21,7 +21,7 @@ public class Trapezoid extends Quadrilateral{
 
     @Override
     void exibir(){
-        System.out.println("Trapézio - base maior: " + baseMaior + ", base menor: " + baseMenor + ", altura: " + Altura + ", área: " +Area());
+        System.out.println("Trapézio -  Área: " + Area());
     }
 
 }
