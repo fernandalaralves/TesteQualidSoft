@@ -18,6 +18,6 @@ public class Parallelogram extends Quadrilateral {
 
     @Override
     void exibir(){
-        System.out.println("Paralelogramo - base: " + Base + ", altura: " + Altura + ", área: " + Area());
+        System.out.println("Paralelogramo - Área: " + Area());
     }
 }
