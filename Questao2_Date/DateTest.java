@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class DateTest {
 
     public static void main(String[] args) {
-        //Criar objeto scanner
         Scanner input = new Scanner(System.in);
 
         System.out.println("Entre com um dia entre " + "1 a 31:");
