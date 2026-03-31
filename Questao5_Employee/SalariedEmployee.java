@@ -20,13 +20,12 @@ public class SalariedEmployee extends Employee{
     public double getSalarioSemanal() {
         return salarioSemanal;
     }
-    //calcula rendimentos; sobrescreve o metodo earning em Emplyee
+    
     @Override
     public double earnings() {
         return getSalarioSemanal();
     }
 
-    //retorna representação String do objeto SalariedEmployee
     @Override
     public String toString(){
         return String.format("Salário do Empregado: %s%n%s: $%, .2f",
