@@ -16,6 +16,6 @@ double Area(){
 
     @Override
     void exibir(){
-        System.out.println("Quadrado - Lado: " + Lado + ", Área: " + Area());
+        System.out.println("Quadrado -  Área: " + Area());
     }
 }
