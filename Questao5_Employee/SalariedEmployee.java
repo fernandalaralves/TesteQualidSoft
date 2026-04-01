@@ -28,7 +28,7 @@ public class SalariedEmployee extends Employee{
 
     @Override
     public String toString(){
-        return String.format("Salário do Empregado: %s%n%s: $%, .2f",
+        return String.format("Empregado Assalariado: %s%n%s: $%, .2f",
         super.toString(), "Salário semanal", getSalarioSemanal());
     }
 }
