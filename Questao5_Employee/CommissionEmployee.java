@@ -1,29 +1,29 @@
 package Questao5_Employee;
 
 public class CommissionEmployee extends Employee{
-    private double salarioBruto;
+    private double totalVendas;
     private double porcentagemComissao;
 
-    public CommissionEmployee (String Nome, String Sobrenome, String CPF, double salarioBruto, double porcentagemComissao){
+    public CommissionEmployee (String Nome, String Sobrenome, String CPF, double totalVendas, double porcentagemComissao){
         super(Nome, Sobrenome, CPF);
 
         if(porcentagemComissao <= 0.0 || porcentagemComissao >= 1.0)
         throw new IllegalArgumentException("A porcentagem da Comisão deve ser > 0.0 e 1.0");
 
-        if(salarioBruto < 0.0)
-            throw new IllegalArgumentException("o salário bruto deve ser >= 0.0");
+        if(totalVendas < 0.0)
+            throw new IllegalArgumentException("o total de vendas deve ser >= 0.0");
 
-        this.salarioBruto = salarioBruto;
+        this.totalVendas = totalVendas;
         this.porcentagemComissao = porcentagemComissao;
     }
 
-    public void setSalarioBruto(double salarioBruto){
-        if(salarioBruto < 0.0)
-            throw new IllegalArgumentException("o salário bruto deve ser >= 0.0");
-        this.salarioBruto =salarioBruto;
+    public void settotalVendas(double totalVendas){
+        if(totalVendas < 0.0)
+            throw new IllegalArgumentException("o total de vendas deve ser >= 0.0");
+        this.totalVendas =totalVendas;
     }
-    public double getSalarioBruto(){
-        return salarioBruto;
+    public double gettotalVendas(){
+        return totalVendas;
     }
 
     public void setPorcentagemComissao(double porcentagemComissao){
@@ -39,14 +39,13 @@ public class CommissionEmployee extends Employee{
 
     @Override
     public double earnings() {
-        return getPorcentagemComissao() * getSalarioBruto();
+        return getPorcentagemComissao() * gettotalVendas();
     }
     @Override
-    public String toString()
-    {
-        return String.format("%s: %s%n%s: $%, .2f; %s: %.2f",
+     public String toString() {
+        return String.format("%s: %s%n%s: $%,.2f; %s: %.2f",
                 "comissão do empregado", super.toString(),
-                "salário bruto", getSalarioBruto(),
+                "total de vendas", gettotalVendas(),
                 "porcentagem de comissão", getPorcentagemComissao());
     }
 }
