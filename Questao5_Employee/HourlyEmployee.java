@@ -48,7 +48,7 @@ public class HourlyEmployee extends Employee{
     }
     @Override
     public String toString(){
-        return String.format("carga-horária do empregado: %s%n%s: $%,.2f: %s: %, .2f ",
+        return String.format("Empregado por carga-horária: %s%n%s: $%,.2f: %s: %, .2f ",
                 super.toString(), "salário por hora", getSalarioHora(),
                 "horas trabalhadas", getHoras());
     }
