@@ -9,7 +9,7 @@ public class CompareSubstringsTest {
     public void testGetSmallestAndLargest() {
         CompareSubstrings cs = new CompareSubstrings();
         assertEquals("ava\nwel", cs.getSmallestAndLargest("welcomeToJava", 3));
-        assertEquals("hello\nworld", cs.getSmallestAndLargest("helloworld", 5));
+        assertEquals("navio\narroz", cs.getSmallestAndLargest("arroznavio", 5));
         assertEquals("a\nc", cs.getSmallestAndLargest("abc", 1));
     }
 }
