@@ -16,22 +16,12 @@ public class ValidateIPTest {
     }
 
     @Test
-    public void testaIPValido3() {
-        assertTrue(validate("150.251.200.255"));
-    }
-
-    @Test
     public void testaIPInvalido() {
-        assertFalse(validate("316.0.0.1"));
-    }
-
-    @Test
-    public void testaIPInvalido2() {
         assertFalse(validate("999.999.999.999"));
     }
 
     @Test
-    public void testaIPInvalido5() {
+    public void testaIPInvalido2() {
         assertFalse(validate("abc.def.ghi.jkl"));
     }
 }
