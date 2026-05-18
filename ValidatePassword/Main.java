@@ -19,29 +19,8 @@ public class Main
 	
 	public static boolean validatePassword(String password)
 {
-    if (password.length() < 9) {
-        return false;
-    }
-    
-        boolean  uppercase = false;
-        boolean  lowercase = false;
-        boolean  specialCharacter = false;
-        boolean  digit = false;
+	  String regex = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[^A-Za-z0-9]).{9,}$";
         
-        for(char c : password.toCharArray()) 
-        {
-            if(Character.isUpperCase(c)){
-                uppercase = true;
-            } else if (Character.isLowerCase(c)){
-                lowercase = true;
-            } else if (Character.isDigit(c)) {
-                digit = true;
-            } else if (!Character.isLetterOrDigit(c)){
-                specialCharacter = true;
-            }
-        }
-        
-        return uppercase && lowercase && digit && specialCharacter;
-}
-    
+        return password.matches(regex);
+	}
 }
