@@ -26,8 +26,7 @@ public class MyStack
 
         if(isEmpty())
         {
-            System.out.println("pilha vazia");
-            return null;
+            throw new EmptyStackException();
         }
         String s = first.item;
         first = first.next;
@@ -37,8 +36,7 @@ public class MyStack
     public String peek()
     {
         if(isEmpty()) {
-            System.out.println("pilha vazia");
-            return null;
+             throw new EmptyStackException();
         }
         return first.item;
     }
