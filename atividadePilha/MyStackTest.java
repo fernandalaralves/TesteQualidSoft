@@ -58,18 +58,21 @@ public class MyStackTest
     }
 
     @Test
-    void popEmPilhaVaziaDeveRetornarNull()
+    void popEmPilhaVaziaDeveRetornarExeption()
     {
         MyStack pilha = new MyStack();
 
-        assertNull(pilha.pop());
+        assertThrows(
+                EmptyStackException.class,
+                () -> pilha.pop());
     }
 
     @Test
-    void peekEmPilhaVaziaDeveRetornarNull()
+    void peekEmPilhaVaziaDeveRetornarExeption()
     {
         MyStack pilha = new MyStack();
-
-        assertNull(pilha.peek());
+        assertThrows(
+                EmptyStackException.class,
+                () -> pilha.peek());
     }
 }
