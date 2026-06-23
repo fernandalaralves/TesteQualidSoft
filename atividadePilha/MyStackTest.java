@@ -1,5 +1,6 @@
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
+import java.util.EmptyStackException;
 
 public class MyStackTest
 {
@@ -74,5 +75,13 @@ public class MyStackTest
         assertThrows(
                 EmptyStackException.class,
                 () -> pilha.peek());
+    }
+
+    @Test
+    void pushNDeveAceitarNulo(){
+        MyStack pilha = new MyStack();
+
+        assertThrows(
+            IllegalArgumentException.class, () -> pilha.push(null));
     }
 }
