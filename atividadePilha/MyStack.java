@@ -14,6 +14,9 @@ public class MyStack
     }
 
     public void push(String s) {
+        if(s == null) {
+            throw new IllegalArgumentException("não são permitidos valores nulos");
+        }
         Node p = new Node();
 
         p.item = s;
