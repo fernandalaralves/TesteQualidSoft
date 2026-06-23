@@ -49,7 +49,7 @@ public class MyStack
         Node p;
 
         for(p = first; p != null; p = p.next)
-            System.out.println("%s ->", p.item);
+            System.out.printf("%s ->", p.item);
         System.out.println("null.\n");
     }
 }
